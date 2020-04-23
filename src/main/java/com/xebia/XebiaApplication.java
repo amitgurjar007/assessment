@@ -94,7 +94,9 @@ public class XebiaApplication {
 		double totalCost = TotalCostForDiscount + TotalCostOfGrocery;
 		System.out.println("total Cost without $5 discount ==== "+totalCost);
 		//For every $100 on the bill, there would be a $ 5 discount (e.g. for $ 990, you get $ 45 as a discount)
-		totalCost =  (((long)totalCost/100)*5);
+		double discount =  (((long)totalCost/100)*5);
+		System.out.println("You get $5 discount on every $ 100 on bill = " + discount);
+		totalCost = totalCost-discount;
 		
 		return totalCost;
 	}
